@@ -1,0 +1,28 @@
+=font($ff, $fz, $fw, $clr, $up)
+	font-family: $ff
+	font-size: $fz
+	font-weight: $fw
+	color: $clr
+	text-transform: $up
+
+=sm360
+	@media screen and (max-width: 360px)
+		@content
+
+=sm430
+	@media screen and (max-width: 430px)
+		@content
+
+
+=md640
+	@media screen and (max-width: 640px)
+		@content
+
+=mdmin640
+	@media screen and (max-width: 640px)
+		@content
+
+=md760
+	@media screen and (max-width: 760px)
+		@content
+

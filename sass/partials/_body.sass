@@ -1,0 +1,53 @@
+.body
+	background: #f8f8f8
+
+.flex-container-body
+	display: flex
+	justify-content: space-around
+	+md760
+		flex-wrap: wrap
+
+.body-box
+	margin-top: 32px
+	margin-left: 8px
+	+md760
+		width: 47%
+	+sm430
+		width: 90%
+
+.body-box1:first-child
+	margin-left: 45px
+	+md760
+		margin-left: 8px
+
+.body-p
+	position: relative
+	padding: 4px 0 4px 48px
+	margin-bottom: 13px
+	+font($bit, 18px, 400, #252525, none)
+
+.body-p::before
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	width: 31px
+	height: 31px
+	display: block
+
+@each $icon in ic-awesomesliders, ic-moderntheme, ic-customizeit
+	.icon-#{$icon}
+		@extend %icon
+		background: url(../images/#{$icon}.png) no-repeat
+
+.body-span
+	display: block
+	+font($rob, 14px, 400, #5c5c5c, none)
+
+.red-line
+	width: 100%
+	height: 8px
+	background: $red
+	margin-top: 79px
+	+md760
+		margin-top: 35px

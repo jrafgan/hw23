@@ -1,0 +1,43 @@
+.footer
+	background: url(../images/footer-bg.jpg)
+
+.footer-box
+	width: 29%
+	margin-top: 52px
+	+md760
+		width: 50%
+		margin-top: 15px
+	+sm430
+		width: 90%
+
+.footer-p
+	margin-bottom: 18px
+	+font($rob, 14px, 700, #fff, uppercase)
+
+.footer-span
+	display: block
+	+font($rob, 14px, 700, #adadad, none)
+
+.box__2--text1
+	margin-bottom: 36px
+
+.post-link
+	display: block
+	border-bottom: 1px solid #3b3b3b
+	margin-bottom: 12px
+	padding-bottom: 18px
+	+font($bit, 14px, 700, #adadad, none)
+
+%ic
+	width: 30px
+	height: 31px
+	display: inline-block
+	margin-right: 7px
+	margin-bottom: 6px
+
+@each $icon in ic-rss, ic-fb, ic-twt, ic-email, ic-tumblr, ic-pinterest, ic-vimeo, ic-zerply, ic-picasa, ic-stumbleupon, ic-skype, ic-redit, ic-evernote, ic-behance, ic-dribbble, ic-digg, ic-blogger, ic-flickr, ic-linkedin, ic-gplus
+	.#{$icon}
+		@extend %ic
+		background: url(../images/#{$icon}.jpg) 0 0 no-repeat
+
+

@@ -1,0 +1,153 @@
+%icon
+	display: inline-block
+	background-position: 0 0
+	background-repeat: no-repeat
+
+@each $icon in ic-twt1, ic-fb1, ic-dribble1, ic-rss1
+	.#{$icon}
+		@extend %icon
+		background-image: url(../images/#{$icon}.png)
+
+.ic-twt1
+	width: 26px
+	height: 15px
+
+.ic-fb1
+	width: 8px
+	height: 16px
+
+.ic-dribble1
+	width: 16px
+	height: 16px
+
+.ic-rss1
+	width: 17px
+	height: 17px
+
+.top-header
+	background: url(../images/header-bg.jpg)
+
+.ic-block
+	display: flex
+	justify-content: flex-end
+	padding: 15px 0
+
+.icon
+	margin-left: 17px
+	margin-right: 2px
+
+.bot-header
+	background: #fbfbfb
+
+.flex-container-bot-header
+	display: flex
+	justify-content: space-between
+
+.logo
+	width: 122px
+	height: 36px
+	margin: 10px 0 6px 18px
+	+md640
+		margin-left: 0
+
+.nav-btn
+	width: 50px
+	height: 48px
+	background-color: $red
+	float: right
+	border: none
+	position: relative
+	display: none
+	+md640
+		display: block
+
+.nav-btn i
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 18px
+	height: 2px
+	background: #fff
+	margin: -1px 0 0 -9px
+
+.nav-btn i::before,
+.nav-btn i::after
+	content: ""
+	width: 18px
+	height: 2px
+	background: #fff
+	position: absolute
+	left: 0
+
+.nav-btn i::before
+	top: -6px
+
+.nav-btn i::after
+	top: 6px
+
+.nav-btn.is-active i
+	background: transparent
+
+.nav-btn.is-active i::before
+	top: 0
+	transform: rotate(45deg)
+
+.nav-btn.is-active i::after
+	top: 0
+	transform: rotate(-45deg)
+
+.main-nav
+	position: relative
+
+.main-nav ul
+	position: absolute
+	top: 51px
+	right: 58px
+	list-style: none
+	width: 120px
+	margin: 0
+	display: none
+
+.regular-nav li
+	display: inline-block
+	padding: 0 22px 0 0
+	+font($rob, 13px, 400, #252525, uppercase)
+
+.regular-nav li:last-child
+	padding-right: 0
+
+
+.regular-nav ul
+	padding-left: 0
+	padding-right: 20px
+	margin: 21px 15px 0 0
+	display: inline-block
+	+md640
+		display: none
+
+.main-nav li 
+	padding: 0
+	margin: 0
+	background: $red
+
+
+li a:hover
+	color: #25282b
+
+.main-nav a
+	text-decoration: none
+	text-transform: uppercase
+	font-size: 13px
+	font-weight: 400
+	color: #fff
+	display: block
+	padding: 10px 5px
+	border-bottom: 1px solid #fff
+
+
+
+
+
+
+
+
